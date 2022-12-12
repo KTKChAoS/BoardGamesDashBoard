@@ -20,6 +20,9 @@ mongoose.connect("mongodb+srv://gamesdashboard:GamesDashBoard2022@cluster0.xxrzc
 .then(()=> console.log("DB Connected"))
 .catch((err)=>console.log("DB connection error", err));
 
+app.get('/', (req, res) => {
+  res.sendStatus(200)
+})
 
 //middleware
 app.use(morgan("dev"));
